@@ -2,6 +2,7 @@ import { render, fireEvent } from "@testing-library/react";
 import Counter from "./Counter";
 
 describe(Counter, () => {
+  // We are checimg component rendering of initail stage
   it("Counter displays initial count correctly", () => {
     const { getByTestId } = render(<Counter initial={0} />);
     const countValue = Number(getByTestId("count").textContent);
