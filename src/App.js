@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1>React testing practice</h1>
         <Counter initial={0} />
-        <Api />
+        {/* <Api /> */}
       </header>
     </div>
   );
