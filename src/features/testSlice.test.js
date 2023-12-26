@@ -1,4 +1,4 @@
-import testReducer, { increment, decrement } from "./testSlice";
+import testReducer, { increment, decrement, reset } from "./testSlice";
 describe("counter reducer", () => {
   const initialState = {
     value: 3,
@@ -14,5 +14,10 @@ describe("counter reducer", () => {
   it("should handle decrement", () => {
     const actual = testReducer(initialState, decrement());
     expect(actual.value).toEqual(2);
+  });
+
+  it("should handle reset", () => {
+    const actual = testReducer(initialState, reset());
+    expect(actual.value).toEqual(0);
   });
 });
